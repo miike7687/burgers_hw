@@ -17,3 +17,31 @@ li {
 .form-group {
   margin-bottom: 5px;
 }
+
+.container {
+  width: 85%;
+  margin: 25px auto;
+}
+
+#left,
+#right {
+  font-size: 32px;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  color: chocolate;
+}
+
+#intro {
+  text-align: center;
+  font-size: 28px;
+}
+
+.create-form,
+#form-add,
+#add-instructions,
+.instructions {
+  text-align: center;
+}

@@ -1,44 +1,63 @@
-<h1>Burgers!</h1>
+<div class="container">
+  <h1>Eat-Da-Burger!</h1>
+  <h2 id="intro"> If you're a carnivore and hungry for some unique burgers, you've come to the right spot!</h2>
+  <hr>
 
-<h2>Burgers that are not devoured!</h2>
+  <p class="instructions">Click the button in the left column to eat any burger in stock. Click the button to order
+    more
+    of any burger out of stock (right). </p>
 
-<ul>
-  {{#each burgers}}
+  <div class="row">
+    <!-- burgers -->
+    <div class="col-md-6">
+      <!-- left column -->
+      <h2 id="left">To Be Eaten...</h2>
+      <ul>
+        {{#each burgers}}
 
-  {{#unless devoured}}
-  {{> burgers/burger-block}}
-  {{/unless}}
-
-
-  {{/each}}
-</ul>
-
-<h2>Burgers that are devoured!</h2>
-
-<ul>
-
-  {{#each burgers}}
-  {{#if devoured}}
-  {{> burgers/burger-block}}
-  {{/if}}
+        {{#unless devoured}}
+        {{> burgers/burger-block}}
+        {{/unless}}
 
 
-  {{/each}}
-</ul>
+        {{/each}}
+      </ul>
 
-<h2>Add a Burger</h2>
-<form class="create-form">
+    </div> {{!-- left column --}}
 
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
+    <div class="col-md-6">
+      <!-- right column -->
+      <h2 id="right">Already Devoured!</h2>
+      <ul>
 
-  <div class="form-group">
-    <label for="slee">Devoured?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Devoured!<br>
-    <input type="radio" name="devoured" value="0"> Still Available
-  </div>
+        {{#each burgers}}
+        {{#if devoured}}
+        {{> burgers/burger-block}}
+        {{/if}}
 
-  <button type="submit">Add Burger</button>
-</form>
+
+        {{/each}}
+      </ul>
+    </div> <!-- right column -->
+  </div> {{!-- row --}}
+
+
+  <hr>
+  <h2 id="form-add">Add a Burger</h2>
+  <p id="add-instructions">Don't see your favorite burger on the list? Add it to the menu!</p>
+  <form class="create-form">
+
+    <div class="form-group">
+      <label for="ca">Burger Name:</label>
+      <input type="text" id="ca" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="slee">Devoured?</label><br>
+      <input type="radio" name="devoured" value="1" checked> Devoured!<br>
+      <input type="radio" name="devoured" value="0"> Still Available
+    </div>
+
+    <button type="submit">Add Burger</button>
+  </form>
+</div> <!-- container -->

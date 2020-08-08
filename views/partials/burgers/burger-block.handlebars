@@ -1,11 +1,14 @@
 <li>
 	{{!-- Add a button if you want to devour the burgers moving them to the right column --}}
-	{{name}}
+	<span class="burger-name">{{name}}</span>
+
+
 	{{#unless devoured}}
 	<button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">
 		Devour
 	</button>
 	{{/unless}}
+	<span class="ingredients">Ingredients: {{ingredients}}</span>
 
 	{{!-- Add a button if you want to restock the burgers that have been devoured, moving them to the left column --}}
 	{{#if devoured}}

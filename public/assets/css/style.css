@@ -21,17 +21,20 @@ li {
 .container {
   width: 85%;
   margin: 25px auto;
+  background-image: url("https://webstockreview.net/images/burger-clipart-border.jpg");
 }
 
 #left,
 #right {
   font-size: 32px;
+  background: #faebd7;
+  margin-top: 20px;
 }
 
 h1 {
   text-align: center;
   font-weight: bold;
-  color: chocolate;
+  color: darkblue;
 }
 
 #intro {
@@ -41,7 +44,29 @@ h1 {
 
 .create-form,
 #form-add,
-#add-instructions,
-.instructions {
+#add-instructions {
   text-align: center;
+  background-color: orange;
+}
+
+.ingredients {
+  font-size: 10px;
+}
+
+.burger-name {
+  font-weight: bold;
+  color: darkorange;
+}
+
+.instructions {
+  background: #faebd7;
+}
+
+.col-md-6,
+#main {
+  background-color: orange;
+}
+
+#main {
+  margin-top: 15px;
 }

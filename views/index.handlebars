@@ -1,17 +1,20 @@
 <div class="container">
-  <h1>Eat-Da-Burger!</h1>
-  <h2 id="intro"> If you're a carnivore and hungry for some unique burgers, you've come to the right spot!</h2>
-  <hr>
+  <div id="main">
+    <h1>Eat-Da-Burger!</h1>
+    <h2 id="intro"> If you're a carnivore and hungry for some unique burgers, you've come to the right spot!</h2>
+    <hr>
+  </div>
 
-  <p class="instructions">Click the button in the left column to eat any burger in stock. Click the button to order
-    more
-    of any burger out of stock (right). </p>
+
 
   <div class="row">
+
     <!-- burgers -->
     <div class="col-md-6">
+
       <!-- left column -->
       <h2 id="left">To Be Eaten...</h2>
+      <p class="instructions">Click the button in this column to eat any burger in stock.</p>
       <ul>
         {{#each burgers}}
 
@@ -26,8 +29,13 @@
     </div> {{!-- left column --}}
 
     <div class="col-md-6">
+
       <!-- right column -->
       <h2 id="right">Already Devoured!</h2>
+      <p class="instructions">Click the button in this
+        column to order
+        more
+        of any burger out of stock. </p>
       <ul>
 
         {{#each burgers}}
@@ -43,13 +51,17 @@
 
 
   <hr>
-  <h2 id="form-add">Add a Burger</h2>
-  <p id="add-instructions">Don't see your favorite burger on the list? Add it to the menu!</p>
-  <form class="create-form">
 
+  <form class="create-form">
+    <h2 id="form-add">Add a Burger</h2>
+    <p id="add-instructions">Don't see your favorite burger on the list? Add its name and ingredients to the menu!</p>
     <div class="form-group">
       <label for="ca">Burger Name:</label>
       <input type="text" id="ca" name="name">
+    </div>
+    <div class="form-group">
+      <label for="cai">Ingredients:</label>
+      <input type="text" id="cai" name="ingredients">
     </div>
 
     <div class="form-group">

@@ -40,4 +40,27 @@ $(function () {
       location.reload();
     });
   });
+
+  // $(".modify-form").on("submit", function (event) {
+  //   // Make sure to preventDefault on a submit event.
+  //   event.preventDefault();
+
+  //   // Get the ID by finding an element with a "name" attribute equal to the string "id"
+  //   var name = $("[name=burger]").val().trim();
+  //   console.log(name);
+
+  //   var updatedBurger = {
+  //     ingredients: $(".modify-form [name=newburger]").val().trim(),
+  //   };
+
+  //   // Send the PUT request.
+  //   $.ajax("/api/burgers/" + name, {
+  //     type: "PUT",
+  //     data: updatedBurger,
+  //   }).then(function () {
+  //     console.log("updated name ", name);
+  //     // Reload the page to get the updated list
+  //     location.reload();
+  //   });
+  // });
 });

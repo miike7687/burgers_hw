@@ -92,9 +92,9 @@
         <p class="modify-instructions">Finally: Click
           "Modify My Burger" to modify the burger's ingredients.</p>
         <form id="modifyburger" class="button-size">
-          <select name="burgers">
+          <select name="burger">
             {{#each burgers}}
-            <option>{{name}}</option>
+            <option value="{{this.name}}">{{name}}</option>
             {{/each}}
           </select>
           <textarea type="text" name="newburger" placeholder="New ingredients here"></textarea>

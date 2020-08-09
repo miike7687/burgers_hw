@@ -48,15 +48,16 @@ router.put("/api/burgers/status/:id", function (req, res) {
   );
 });
 
-router.put("api/burgers/ingredients/:id", function (req, res) {
+router.put("/api/burgers/ingredients/:id", function (req, res) {
   var condition = "id = " + req.params.id;
   console.log("condition", condition);
   var newIngredients = req.body.ingredients;
   console.log(newIngredients);
 
-  burger.update({
-    ingredients: newIngredients,
-  }),
+  burger.update(
+    {
+      ingredients: newIngredients,
+    },
     condition,
     function (result) {
       if (result.changedRows == 0) {
@@ -65,7 +66,8 @@ router.put("api/burgers/ingredients/:id", function (req, res) {
       } else {
         res.status(200).end();
       }
-    };
+    }
+  );
 });
 
 router.delete("/api/burgers/:id", function (req, res) {

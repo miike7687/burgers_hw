@@ -60,7 +60,7 @@ $(function () {
       type: "PUT",
       data: updatedBurger,
     }).then(function () {
-      console.log("updated ingredients ", ingredients);
+      // console.log("updated ingredients ", ingredients);
       // Reload the page to get the updated list
       location.reload();
     });

@@ -52,24 +52,54 @@
 
   <hr>
 
-  <form class="create-form">
-    <h2 id="form-add">Add a Burger</h2>
-    <p id="add-instructions">Don't see your favorite burger on the list? Add its name and ingredients to the menu!</p>
-    <div class="form-group">
-      <label for="ca">Burger Name:</label>
-      <input type="text" id="ca" name="name">
-    </div>
-    <div class="form-group">
-      <label for="cai">Ingredients:</label>
-      <input type="text" id="cai" name="ingredients">
+  <div class="row">
+    <div class="col-md-4">
+      <form class="create-form">
+        <h2 id="form-add">Add a Burger:</h2>
+        <p class="add-instructions">Don't see your favorite burger on the list?</p>
+        <p class="add-instructions">Add its name and ingredients to the menu!</p>
+        <div class="form-group">
+          <label for="ca">Burger Name:</label>
+          <input type="text" id="ca" name="name">
+        </div>
+        <div class="form-group">
+          <label for="cai">Ingredients:</label>
+          <input type="text" id="cai" name="ingredients">
+        </div>
+
+        <div class="form-group">
+          <label for="slee">Devoured?</label><br>
+          <input type="radio" name="devoured" value="1" checked> Devoured!<br>
+          <input type="radio" name="devoured" value="0"> Still Available
+        </div>
+
+        <button type="submit" id="button">Add Burger</button>
+      </form>
     </div>
 
-    <div class="form-group">
-      <label for="slee">Devoured?</label><br>
-      <input type="radio" name="devoured" value="1" checked> Devoured!<br>
-      <input type="radio" name="devoured" value="0"> Still Available
-    </div>
 
-    <button type="submit">Add Burger</button>
-  </form>
-</div> <!-- container -->
+    <div class="col-md-4">
+      <form class="modify-form">
+        <h2 id="modify-title">Modify a Burger:</h2>
+        <ul>
+          <li>Have dietary restrictions?</li>
+          <li>Special Allergies?</li>
+          <li>Despise bacon?</li>
+        </ul>
+        <p class="modify-instructions">First: Choose which burger you want to change from the dropdown menu.</p>
+        <p class="modify-instructions">Next: Type only the ingredients you want on your burger below. Omit
+          ingredients you don't want on your burger</p>
+        <p class="modify-instructions">Finally: Click
+          "Modify My Burger" to modify the burger's ingredients.</p>
+        <form id="modifyburger" class="button-size">
+          <select name="burgers">
+            {{#each burgers}}
+            <option>{{name}}</option>
+            {{/each}}
+          </select>
+          <textarea type="text" name="newburger" placeholder="New ingredients here"></textarea>
+          <button type="submit" id="modify-button">Modify My Burger</button>
+        </form>
+    </div>
+  </div>
+</div>

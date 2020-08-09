@@ -63,6 +63,7 @@ h1 {
   background: aquamarine;
 }
 
+.col-md-3,
 .col-md-4,
 .col-md-6,
 #main {
@@ -77,9 +78,11 @@ h1 {
   margin-left: 10px;
 }
 
+.col-md-3,
 .col-md-4 {
   max-width: 80%;
-  margin-left: 5px;
+  border-style: dotted;
+  margin-bottom: 10px;
 }
 
 #modify-button {
@@ -88,4 +91,13 @@ h1 {
 
 .modify-instructions {
   font-size: 12px;
+}
+
+#delete-options {
+  font-size: 11px;
+}
+
+h6 {
+  text-align: center;
+  border-style: solid;
 }

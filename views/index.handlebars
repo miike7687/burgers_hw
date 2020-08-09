@@ -1,6 +1,8 @@
 <div class="container">
   <div id="main">
     <h1>Eat-Da-Burger!</h1>
+
+
     <h2 id="intro"> If you're a carnivore and hungry for some unique burgers, you've come to the right spot!</h2>
     <hr>
   </div>
@@ -100,6 +102,21 @@
           <textarea type="text" name="newburger" placeholder="New ingredients here"></textarea>
           <button type="submit" id="modify-button">Modify My Burger</button>
         </form>
+    </div>
+    <div class="col-md-4">
+      <h2 id="delete-title">Delete a Burger:</h2>
+      <h6>MANAGERS ONLY</h6>
+      <ul>
+        {{#each burgers}}
+        <li>
+          <p id="delete-options">
+            {{this.id}}. {{this.name}}
+
+            <button data-burgerid="{{this.id}}" class="delburger">Delete Burger!</button>
+          </p>
+        </li>
+        {{/each}}
+      </ul>
     </div>
   </div>
 </div>
